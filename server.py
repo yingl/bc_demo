@@ -13,7 +13,7 @@ blockchain = bc.BlockChain()
 def mine():
     last_block = blockchain.last_block
     last_proof = last_block['proof']
-    proof = blockchain.pos(last_proof)
+    proof = blockchain.pow(last_proof)
     # Deliver bonus
     blockchain.new_transaction(sender='0', # From system
                                recipient=node_id,
