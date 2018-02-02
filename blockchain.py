@@ -62,7 +62,7 @@ class BlockChain:
             ci += 1
         return True
 
-    def pos(self, last_proof: int) -> int: # proof of work
+    def pow(self, last_proof: int) -> int: # proof of work
         proof = 0
         while not self.valid_proof(last_proof, proof):
             proof += 1
